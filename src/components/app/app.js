@@ -1,7 +1,9 @@
+import WithBookstoreService from "../hoc/with-bookstore-service";
 import "./app.scss";
 
-const App = () => {
+const App = ({ bookstoreService }) => {
+  console.log(bookstoreService.getBooks());
   return <div className="app">App</div>;
 };
 
-export default App;
+export default WithBookstoreService()(App);
